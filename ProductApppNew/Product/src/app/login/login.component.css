@@ -1,0 +1,78 @@
+.form-container{
+    border: 2px solid;
+    border-color: whitesmoke;
+    padding: 30px 40px;
+    background-color: rgb(172, 177, 230);
+     margin-top: 15vh;
+    margin-bottom: 1vh;
+    border-radius: 50px 50px 50px 50px;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(15, 11, 11, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(14, 12, 12, 0.75);
+}
+.form-control{
+    font-size: 12px;
+    min-height: 30px;
+    font-weight: lighter;
+    border: 2px solid;
+    box-shadow: 0 0 0.2rem rgba(240, 171, 158, 0.25);
+}
+.form-group{
+    color: white;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-control:focus{
+    border-color: rgb(8, 7, 7);
+}
+
+.form-check{
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header{
+    margin-left: 1%;
+    margin-top: 1%;
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-weight: lighter;
+    color:whitesmoke;
+    font-size: 30px;
+}
+p{
+    color: black;
+    font-weight: bolder;
+    font-family: 'Times New Roman';
+    font-size: 13px;
+    text-align: center;
+}
+a{
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+}
+.btn-custom{
+    background: rgba(2, 0, 0, 0.6);
+    border-color: grey;
+    color: rgb(245, 245, 245);
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.btn-custom:focus,
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:active:focus{
+
+    /* background: rgb(20, 10, 8); */
+    background: rgb(102, 204, 102);
+    border-color: rgb(19, 3, 1);
+    color: whitesmoke;
+}
+
+.btn-custom:focus{
+    box-shadow: 0 0 0.2rem rgba(252, 140, 121, 0.25);
+}

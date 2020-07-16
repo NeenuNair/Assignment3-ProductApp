@@ -1,0 +1,65 @@
+<div class="card">
+    <form #productForm="ngForm" (ngSubmit)="AddProduct()">
+    <div class="card-header">{{title}}</div>
+        <div class="card-body">
+            <div class="card-responsive">
+                <table class="table  table-bordered table-striped table-hover">
+                        <tbody>
+                            <tr [class.has-error]="productControlId.invalid && productControlId.touched"
+                                [class.has-success]="productControlId.valid">
+                                  <td><label class="control-label">Product Id *</label></td>
+                                  <label class="label"><input type="number" required name="p_id" [(ngModel)]="productItem.productId" #productControlId="ngModel"></label>                    
+                                  <span class="help-block" *ngIf="productControlId.invalid && productControlId.touched"> **Product Id is required </span>
+                              </tr>
+                              <tr [class.has-error]="productControlNam.invalid && productControlNam.touched"
+                                  [class.has-success]="productControlNam.valid">
+                                  <td><label required class="control-label">Product Name *</label></td>
+                                  <label class="label"><input type="text" required name="p_name" [(ngModel)]="productItem.productName" #productControlNam="ngModel"></label>                                
+                                  <span class="help-block" *ngIf="productControlNam.invalid && productControlNam.touched">**Product Name is required</span>
+                              </tr>
+                              <tr [class.has-error]="productControlCode.invalid && productControlCode.touched"
+                                  [class.has-success]="productControlCode.valid">
+                                  <td><label class="control-label">Product Code *</label></td>
+                                 <label class="label"><input type="text" required name="p_code" [(ngModel)]="productItem.productCode"  #productControlCode="ngModel"></label>                            
+                                  <span class="help-block" *ngIf="productControlCode.invalid && productControlCode.touched">Product Code is required</span>
+                              </tr>
+                              <tr [class.has-error]="productControlDate.invalid && productControlDate.touched"
+                                  [class.has-success]="productControlDate.valid">
+                                  <td><label class="control-label">Product Date *</label></td>
+                                  <label class="label"><input type="text" required name="p_date" [(ngModel)]="productItem.releaseDate" #productControlDate="ngModel"></label>                              
+                                  <span class="help-block" *ngIf="productControlDate.invalid && productControlDate.touched">**Product Date is required</span>
+                              </tr>
+                              <tr [class.has-error]="productControlDescription.invalid && productControlDescription.touched"
+                                  [class.has-success]="productControlDescription.valid">
+                                  <td><label class="control-label">Product Description *</label></td>
+                                  <label class="label"><input type="text" required name="p_desc" [(ngModel)]="productItem.description" #productControlDescription="ngModel"></label> 
+                                  <span class="help-block" *ngIf="productControlDescription.invalid && productControlDescription.touched">**Product Description is required</span>                               
+                              </tr>
+                              <tr [class.has-error]="productControlPrice.invalid && productControlPrice.touched"
+                                  [class.has-success]="productControlPrice.valid">
+                                  <td><label class="control-label">Product Price *</label></td>
+                                  <label class="label"><input type="number" required name="p_price" [(ngModel)]="productItem.price" #productControlPrice="ngModel"></label> 
+                                  <span class="help-block"*ngIf="productControlPrice.invalid && productControlPrice.touched">**Product Price is required</span>                                
+                              </tr>
+                              <tr [class.has-error]="productControlStar.invalid && productControlStar.touched"
+                                  [class.has-success]="productControlStar.valid">
+                                  <td><label class="control-label">Product Star Rating * </label></td>
+                                  <label class="label"><input type="number" required name="p_rating" [(ngModel)]="productItem.starRating" #productControlStar="ngModel"></label> 
+                                  <span class="help-block" *ngIf="productControlStar.invalid && productControlStar.touched">**Product Star Rating is required</span>                               
+                              </tr>
+                              <tr [class.has-error]="productControlImage.invalid && productControlImage.touched"
+                                  [class.has-success]="productControlImage.valid">
+                                  <td><label class="control-label">Product Image URL *</label></td>
+                                  <label class="label"><input type="text" required name="p_image" [(ngModel)]="productItem.imageUrl" #productControlImage="ngModel"></label> 
+                                  <span class="help-block" *ngIf="productControlImage.invalid && productControlImage.touched">**Product Image is required</span>                             
+                              </tr>
+                                <tr>
+                                  <td></td>
+                                  <td><button class="btn btn-success" type="submit" [disabled]="productForm.invalid">Submit</button></td>
+                                </tr>
+                        </tbody>
+                </table>
+        </div>
+    </div>
+</form>
+</div>

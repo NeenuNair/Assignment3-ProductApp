@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+
+            <form  class= "form-container" (ngSubmit)="login()">
+              <br>
+               
+              <h1> User Login Form</h1>
+
+               <br>
+                
+                <div class="form-group">
+                  <label>Email address</label>
+                  <input type="email" [(ngModel)]="userCredential.email" class="form-control rounded-pill form-control-lg" id="email" placeholder="E-mail ID" name="email">
+                  <span id="emailerror"></span>
+                </div>
+
+                    <br>
+                
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" [(ngModel)]="userCredential.password" class="form-control rounded-pill form-control-lg" id="password" placeholder="Password" name="password">
+                  <span id="pwderror"></span>
+                </div>
+
+              
+                  <div class="form-check">
+                     <input type="checkbox" class="form-check-input" id="remember">
+                     <label for="remember">Remember Password</label>
+                  </div>
+                    
+                <button type="submit" class="btn mt-5 btn-custom btn-block text-uppercase rounded-pill form-control-lg">LOG IN</button>
+               <br>
+               <div class="login-sign">
+                 <h6> Need an Account</h6>
+                 <a class="backto" routerLink="/signup">Sign Up</a>
+
+               </div>
+              
+              </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
